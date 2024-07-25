@@ -35,9 +35,19 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    position: relative;
+    padding-inline: 1rem;
   }
 }
-
+.company-logo {
+  position: absolute;
+  top: -2rem;
+  bottom: 0;
+  left: 2rem;
+  right: 0;
+  width: 4rem;
+  transition: all 1s ease;
+}
 .job-listing-desc {
   display: flex;
   flex-direction: column;
@@ -58,6 +68,11 @@ header {
     & > .job-listing {
       flex-direction: row;
       align-items: center;
+      position: static;
     }
+  }
+
+  .company-logo {
+    position: static;
   }
 }
