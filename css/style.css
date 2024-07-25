@@ -1,0 +1,53 @@
+:root {
+  --Desaturated-Dark-Cyan: hsl(180, 29%, 50%);
+
+  --Light-Grayish-Cyan-Bg: hsl(180, 52%, 96%);
+  --Light-Grayish-Cyan-Filter-Tablets: hsl(180, 31%, 95%);
+  --Dark-Grayish-Cyan: hsl(180, 8%, 52%);
+  --Very-Dark-Grayish-Cyan: hsl(180, 14%, 20%);
+}
+
+body {
+  display: grid;
+  grid-template-rows: max-content;
+  min-height: 100vh;
+  min-height: 100svh;
+  background-color: var(--Light-Grayish-Cyan-Bg);
+}
+
+main {
+  height: 100%;
+}
+
+header {
+  background-color: var(--Desaturated-Dark-Cyan);
+  & > picture > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.job-listings {
+  padding: 0;
+  & > .job-listing {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.job-listing-desc {
+  display: flex;
+  flex-direction: column;
+}
+.job-listing-company {
+  display: flex;
+}
+.job-listing-time {
+  display: flex;
+}
+.job-listing-categories {
+  display: flex;
+  flex-wrap: wrap;
+}
