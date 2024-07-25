@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&family=League+Spartan:wght@100..900&display=swap");
 :root {
   --Desaturated-Dark-Cyan: hsl(180, 29%, 50%);
 
@@ -5,6 +6,19 @@
   --Light-Grayish-Cyan-Filter-Tablets: hsl(180, 31%, 95%);
   --Dark-Grayish-Cyan: hsl(180, 8%, 52%);
   --Very-Dark-Grayish-Cyan: hsl(180, 14%, 20%);
+}
+
+.league-spartan-500 {
+  font-family: "League Spartan", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+.league-spartan-700 {
+  font-family: "League Spartan", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
 }
 
 body {
@@ -36,16 +50,27 @@ header {
     justify-content: center;
     align-items: flex-start;
     position: relative;
+    background-color: white;
+    border-left: 0.35rem solid var(--Desaturated-Dark-Cyan);
+    border-radius: 0.5rem;
     padding-inline: 1rem;
+    margin-block-start: 3.5rem;
+    margin-inline: 1.5rem;
   }
 }
+.job-listing-desc {
+  padding-block-start: 2rem;
+  padding-block-end: 1rem;
+  border-bottom: 1px solid var(--Dark-Grayish-Cyan);
+}
+
 .company-logo {
   position: absolute;
-  top: -2rem;
+  top: -1.5rem;
   bottom: 0;
-  left: 2rem;
+  left: 1.2rem;
   right: 0;
-  width: 4rem;
+  width: 3rem;
   transition: all 1s ease;
 }
 .job-listing-desc {
