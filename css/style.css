@@ -132,6 +132,11 @@ header {
   flex-wrap: wrap;
   gap: 0.9rem;
 }
+.tokens {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+}
 .token {
   /* display: flex; */
   padding-inline: 0.6rem;
