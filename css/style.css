@@ -52,12 +52,15 @@ header {
     align-items: flex-start;
     position: relative;
     background-color: white;
-    border-left: 0.35rem solid var(--Desaturated-Dark-Cyan);
+
     border-radius: 0.5rem;
     padding-inline: 1.15rem;
     margin-block-start: 3.5rem;
     margin-inline: 1.5rem;
   }
+}
+.job-listing-featured {
+  border-left: 0.35rem solid var(--Desaturated-Dark-Cyan);
 }
 .job-listing-desc {
   padding-block-start: 2.1rem;
@@ -121,13 +124,13 @@ header {
   display: flex;
   flex-wrap: wrap;
   gap: 0.9rem;
-  & > p {
-    padding-inline: 0.6rem;
-    padding-block: 0.25rem;
-    background-color: var(--Light-Grayish-Cyan-Bg);
-    color: var(--Desaturated-Dark-Cyan);
-    border-radius: 0.3rem;
-  }
+}
+.token {
+  padding-inline: 0.6rem;
+  padding-block: 0.25rem;
+  background-color: var(--Light-Grayish-Cyan-Bg);
+  color: var(--Desaturated-Dark-Cyan);
+  border-radius: 0.3rem;
 }
 .new {
   color: var(--Light-Grayish-Cyan-Filter-Tablets);
