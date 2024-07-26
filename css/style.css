@@ -98,13 +98,18 @@ header {
   margin-inline-start: -0.8rem;
 }
 .filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   position: absolute;
+  background-color: white;
   /* top: 0; */
   bottom: -1rem;
   left: 0;
   right: 0;
-  margin: auto;
-  background-color: white;
+  padding: 1rem;
+  margin-inline: 1.5rem;
+  border-radius: 0.2rem;
 }
 .job-listing-company {
   display: flex;
@@ -128,11 +133,22 @@ header {
   gap: 0.9rem;
 }
 .token {
+  /* display: flex; */
   padding-inline: 0.6rem;
   padding-block: 0.25rem;
   background-color: var(--Light-Grayish-Cyan-Bg);
   color: var(--Desaturated-Dark-Cyan);
   border-radius: 0.3rem;
+}
+
+.token-container {
+  display: flex;
+  & > button {
+    background-color: var(--Desaturated-Dark-Cyan);
+    padding-inline: 0.5rem;
+    border-top-right-radius: 0.3rem;
+    border-bottom-right-radius: 0.3rem;
+  }
 }
 .new {
   color: var(--Light-Grayish-Cyan-Filter-Tablets);
