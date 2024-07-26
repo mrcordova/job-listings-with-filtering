@@ -34,6 +34,7 @@ main {
 }
 
 header {
+  position: relative;
   background-color: var(--Desaturated-Dark-Cyan);
   & > picture > img {
     width: 100%;
@@ -53,15 +54,19 @@ header {
     background-color: white;
     border-left: 0.35rem solid var(--Desaturated-Dark-Cyan);
     border-radius: 0.5rem;
-    padding-inline: 1rem;
+    padding-inline: 1.1rem;
     margin-block-start: 3.5rem;
     margin-inline: 1.5rem;
   }
 }
 .job-listing-desc {
-  padding-block-start: 2rem;
+  padding-block-start: 2.1rem;
   padding-block-end: 1rem;
-  border-bottom: 1px solid var(--Dark-Grayish-Cyan);
+  border-bottom: 0.05rem solid var(--Dark-Grayish-Cyan);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
 }
 
 .company-logo {
@@ -73,21 +78,55 @@ header {
   width: 3rem;
   transition: all 1s ease;
 }
-.job-listing-desc {
-  display: flex;
-  flex-direction: column;
+.company-name {
+  color: var(--Desaturated-Dark-Cyan);
+  font-size: 0.95rem;
+}
+
+.featured {
+  color: var(--Light-Grayish-Cyan-Filter-Tablets);
+  background-color: var(--Very-Dark-Grayish-Cyan);
+  border-radius: 1rem;
+  font-size: 0.85rem;
+  padding-inline: 0.5rem;
+  padding-block-start: 0.2rem;
+  margin-inline-start: -0.8rem;
+}
+.filter {
+  position: absolute;
+  /* top: 0; */
+  bottom: -1rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: white;
 }
 .job-listing-company {
   display: flex;
+  /* align-items: center; */
+  gap: 1.4rem;
 }
 .job-listing-time {
   display: flex;
+  color: var(--Dark-Grayish-Cyan);
+  gap: 0.5rem;
+}
+.job-listing-title {
+  font-size: 0.95rem;
+  /* padding-block-start: 0.5rem; */
 }
 .job-listing-categories {
   display: flex;
   flex-wrap: wrap;
 }
-
+.new {
+  color: var(--Light-Grayish-Cyan-Filter-Tablets);
+  background-color: var(--Desaturated-Dark-Cyan);
+  font-size: 0.9rem;
+  padding-inline: 0.5rem;
+  padding-block-start: 0.2rem;
+  border-radius: 1rem;
+}
 @media (min-width: 45rem) {
   .job-listings {
     & > .job-listing {
