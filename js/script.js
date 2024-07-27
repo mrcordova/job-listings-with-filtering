@@ -2,6 +2,7 @@ const dataResponse = await fetch("/data.json");
 const data = await dataResponse.json();
 const jobListingsUl = document.querySelector(".job-listings");
 const tokenContainer = document.querySelector(".tokens");
+const clearBtn = document.querySelector(".clear-btn");
 const tokenSet = new Set();
 console.log(data);
 // console.log(jobLisg tingsUl);
@@ -77,7 +78,11 @@ function createJobCard() {
   // <p class="token">CSS</p>
   // <p class="token">JavaScript</p>
 }
-
+function removeAllTokens() {
+  tokenContainer.replaceChildren();
+  tokenSet.clear();
+  console.log(tokenSet);
+}
 function createToken(name) {
   tokenContainer.insertAdjacentHTML(
     "beforeend",
@@ -97,4 +102,6 @@ function createToken(name) {
     .querySelector(".token-close-btn")
     .addEventListener("click", removeToken);
 }
+
+clearBtn.addEventListener("click", removeAllTokens);
 createJobCard();
