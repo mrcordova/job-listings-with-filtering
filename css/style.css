@@ -48,6 +48,9 @@ header {
   align-self: stretch;
   &:hover {
     cursor: pointer;
+    text-decoration: underline;
+    text-underline-offset: 0.2rem;
+    color: var(--Desaturated-Dark-Cyan);
   }
 }
 .job-listings {
@@ -75,6 +78,7 @@ header {
   border-left: 0.35rem solid var(--Desaturated-Dark-Cyan);
 }
 .job-listing-desc {
+  flex: content;
   padding-block-start: 2.1rem;
   padding-block-end: 1rem;
   border-bottom: 0.05rem solid var(--Dark-Grayish-Cyan);
@@ -134,7 +138,10 @@ header {
 }
 .job-listing-title {
   font-size: 0.95rem;
-  /* padding-block-start: 0.5rem; */
+  &:hover {
+    cursor: pointer;
+    color: var(--Desaturated-Dark-Cyan);
+  }
 }
 .job-listing-categories {
   padding-block-start: 1rem;
@@ -155,7 +162,11 @@ header {
   color: var(--Desaturated-Dark-Cyan);
   border-radius: 0.3rem;
 }
-
+.job-listing-categories > .token:hover {
+  background-color: var(--Desaturated-Dark-Cyan);
+  color: white;
+  cursor: pointer;
+}
 .token-container {
   display: flex;
   & > button {
@@ -163,6 +174,10 @@ header {
     padding-inline: 0.5rem;
     border-top-right-radius: 0.3rem;
     border-bottom-right-radius: 0.3rem;
+  }
+  & > button:hover {
+    background-color: var(--Very-Dark-Grayish-Cyan);
+    cursor: pointer;
   }
 }
 .new {
