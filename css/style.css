@@ -58,13 +58,14 @@ header {
 
   margin-block-start: clamp(4.5rem, 10.7197rem + -6.9108vw, 9.1rem);
   margin-block-end: 2rem;
+  gap: clamp(1.5rem, 2.8521rem + -1.5023vw, 2.5rem);
   /* Mobile */
   /* margin-block-start: 9.1rem; */
   /* margin-block-end: 2rem; */
   /* Desktop */
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  /* gap: 1.5rem; */
 
   /* DEsktop */
   /* margin-block-start: 4.5rem; */
@@ -102,7 +103,11 @@ header {
   }
 }
 .no-filter-margin {
-  margin-block-start: 4rem;
+  margin-block-start: clamp(4rem, 3.7887rem + 0.9014vw, 4.6rem);
+  /* Mobile */
+  /* margin-block-start: 4rem; */
+  /* Desktop */
+  /* margin-block-start: 4.6rem; */
 }
 .job-listing-featured {
   border-left: 0.35rem solid var(--Desaturated-Dark-Cyan);
@@ -290,8 +295,6 @@ header {
     }
   }
 
-  .no-filter-margin {
-  }
   .job-listing-desc {
     border-bottom: 0;
   }
