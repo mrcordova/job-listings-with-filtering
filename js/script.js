@@ -23,6 +23,7 @@ function addToken(e) {
     filterContainer.classList.toggle("hide", false);
   }
   tokenSet.add(name);
+  filterJobs();
 }
 
 function removeToken(e) {
@@ -32,6 +33,7 @@ function removeToken(e) {
 
   jobListingsUl.classList.toggle("no-filter-margin", tokenSet.size == 0);
   filterContainer.classList.toggle("hide", tokenSet.size == 0);
+  filterJobs();
 }
 function createJobCard() {
   for (const job of data) {
@@ -89,6 +91,7 @@ function removeAllTokens() {
   tokenSet.clear();
   jobListingsUl.classList.toggle("no-filter-margin", true);
   filterContainer.classList.toggle("hide", true);
+  filterJobs();
 }
 function createToken(name) {
   tokenContainer.insertAdjacentHTML(
@@ -109,6 +112,19 @@ function createToken(name) {
     .querySelector(".token-close-btn")
     .addEventListener("click", removeToken);
 }
-
+function filterJobs() {
+  for (const child of jobListingsUl.children) {
+    const tokens = new Set(
+      [...child.querySelectorAll(".token")].map((e) => {
+        return e.textContent.trim();
+      })
+    );
+    if (tokenSet.size !== 0) {
+      child.classList.toggle("hide", tokenSet.intersection(tokens).size == 0);
+    } else {
+      child.classList.toggle("hide", false);
+    }
+  }
+}
 clearBtn.addEventListener("click", removeAllTokens);
 createJobCard();

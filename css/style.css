@@ -102,6 +102,10 @@ header {
     /* margin-inline: 10.2rem 10.2rem; */
     /* gap: 1.5rem; */
   }
+
+  & > .hide {
+    display: none;
+  }
 }
 .no-filter-margin {
   margin-block-start: clamp(4rem, 3.7887rem + 0.9014vw, 4.6rem);
