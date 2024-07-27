@@ -2,6 +2,7 @@ const dataResponse = await fetch("/data.json");
 const data = await dataResponse.json();
 const jobListingsUl = document.querySelector(".job-listings");
 const tokenContainer = document.querySelector(".tokens");
+const tokenSet = new Set();
 console.log(data);
 // console.log(jobLisg tingsUl);
 
@@ -13,7 +14,17 @@ function myTags(strings, tags) {
   return tagTokens;
 }
 function addToken(e) {
-  createToken(e.currentTarget.textContent.trim());
+  const name = e.currentTarget.textContent.trim();
+  if (!tokenSet.has(name)) {
+    createToken(name);
+  }
+  tokenSet.add(name);
+}
+
+function removeToken(e) {
+  const name = e.currentTarget.previousElementSibling.textContent.trim();
+  tokenSet.delete(name);
+  e.currentTarget.parentElement.remove();
 }
 function createJobCard() {
   for (const job of data) {
@@ -72,7 +83,7 @@ function createToken(name) {
     "beforeend",
     ` <div class="token-container">
             <p class="token">${name}</p>
-            <button>
+            <button class="token-close-btn">
               <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14">
                 <path
                   fill="#FFF"
@@ -82,5 +93,8 @@ function createToken(name) {
             </button>
           </div>`
   );
+  tokenContainer.lastChild
+    .querySelector(".token-close-btn")
+    .addEventListener("click", removeToken);
 }
 createJobCard();
