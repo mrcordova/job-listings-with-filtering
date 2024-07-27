@@ -62,6 +62,10 @@ header {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  /* Mobile */
+  /* margin-block-start: 4.5rem; */
+  /* margin-block-end: 2rem; */
+  /* DEsktop */
   margin-block-start: 4.5rem;
   margin-block-end: 2rem;
   & > .job-listing {
@@ -74,7 +78,7 @@ header {
     background-color: white;
     box-shadow: 0px 20px 20px 0px
       hsl(from var(--Desaturated-Dark-Cyan) h s l / 0.5);
-
+    max-inline-size: 66.79rem;
     /* Mobile */
     /* border-radius: 0.5rem; */
     /* padding-inline: 1.15rem; */
@@ -142,19 +146,28 @@ header {
   margin-inline-start: -0.8rem;
 }
 .filter {
+  max-inline-size: 66.79rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: absolute;
   background-color: white;
-  /* top: 0; */
-  bottom: -5.5rem;
+  box-shadow: 0px 20px 20px hsl(from var(--Very-Dark-Grayish-Cyan) h s l / 0.2);
+  border-radius: 0.3rem;
+
+  /* Mobile */
+  /* bottom: -5.5rem; */
+  /* left: 0; */
+  /* right: 0; */
+  /* padding: 1.5rem; */
+  /* margin-inline: 1.1rem 1.2rem; */
+  /* Desktop */
+  bottom: -2.5rem;
   left: 0;
   right: 0;
-  padding: 1.5rem;
-  margin-inline: 1.1rem 1.2rem;
-  border-radius: 0.3rem;
-  box-shadow: 0px 20px 20px hsl(from var(--Very-Dark-Grayish-Cyan) h s l / 0.2);
+  padding-block: 1.3rem;
+  padding-inline: 2.5rem;
+  margin-inline: 10.2rem;
 }
 .job-listing-company {
   display: flex;
@@ -200,7 +213,10 @@ header {
 .tokens {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.9rem;
+  /* Mobile */
+  /* gap: 0.9rem; */
+  /* Desktop */
+  gap: 1.2rem;
 }
 .token {
   padding-inline: 0.6rem;
