@@ -1,7 +1,7 @@
 const dataResponse = await fetch("/data.json");
 const data = await dataResponse.json();
 const jobListingsUl = document.querySelector(".job-listings");
-
+const tokenContainer = document.querySelector(".tokens");
 console.log(data);
 // console.log(jobLisg tingsUl);
 
@@ -12,7 +12,9 @@ function myTags(strings, tags) {
   }
   return tagTokens;
 }
-
+function addToken(e) {
+  createToken(e.currentTarget.textContent.trim());
+}
 function createJobCard() {
   for (const job of data) {
     jobListingsUl.insertAdjacentHTML(
@@ -58,12 +60,27 @@ function createJobCard() {
   }
   const tokens = jobListingsUl.querySelectorAll(".token");
   for (const token of tokens) {
-    token.addEventListener("click", (e) => {
-      console.log(e.currentTarget.textContent.trim());
-    });
+    token.addEventListener("click", addToken);
   }
   // <p class="token">HTML</p>
   // <p class="token">CSS</p>
   // <p class="token">JavaScript</p>
+}
+
+function createToken(name) {
+  tokenContainer.insertAdjacentHTML(
+    "beforeend",
+    ` <div class="token-container">
+            <p class="token">${name}</p>
+            <button>
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14">
+                <path
+                  fill="#FFF"
+                  fill-rule="evenodd"
+                  d="M11.314 0l2.121 2.121-4.596 4.596 4.596 4.597-2.121 2.121-4.597-4.596-4.596 4.596L0 11.314l4.596-4.597L0 2.121 2.121 0l4.596 4.596L11.314 0z" />
+              </svg>
+            </button>
+          </div>`
+  );
 }
 createJobCard();

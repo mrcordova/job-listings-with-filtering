@@ -26,6 +26,7 @@ body {
   grid-template-rows: max-content;
   min-height: 100vh;
   min-height: 100svh;
+  justify-content: center;
   background-color: var(--Light-Grayish-Cyan-Bg);
 }
 
