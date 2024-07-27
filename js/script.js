@@ -120,7 +120,10 @@ function filterJobs() {
       })
     );
     if (tokenSet.size !== 0) {
-      child.classList.toggle("hide", tokenSet.intersection(tokens).size == 0);
+      child.classList.toggle(
+        "hide",
+        tokenSet.intersection(tokens).size !== tokenSet.size
+      );
     } else {
       child.classList.toggle("hide", false);
     }
