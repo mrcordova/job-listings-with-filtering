@@ -45,14 +45,14 @@ header {
 
 .clear-btn {
   color: var(--Dark-Grayish-Cyan);
-  min-height: 100%;
+  align-self: stretch;
   &:hover {
     cursor: pointer;
   }
 }
 .job-listings {
   padding: 0;
-  margin-block-start: 8.5rem;
+  margin-block-start: 9.1rem;
   margin-block-end: 2rem;
   & > .job-listing {
     list-style: none;
@@ -66,7 +66,7 @@ header {
     border-radius: 0.5rem;
     padding-inline: 1.15rem;
     margin-block-start: 2.5rem;
-    margin-inline: 1.5rem;
+    margin-inline: 1.1rem 1.2rem;
     box-shadow: 0px 20px 20px 0px
       hsl(from var(--Desaturated-Dark-Cyan) h s l / 0.5);
   }
@@ -118,7 +118,7 @@ header {
   left: 0;
   right: 0;
   padding: 1.5rem;
-  margin-inline: 1.5rem;
+  margin-inline: 1.1rem 1.2rem;
   border-radius: 0.3rem;
   box-shadow: 0px 20px 20px hsl(from var(--Very-Dark-Grayish-Cyan) h s l / 0.2);
 }
