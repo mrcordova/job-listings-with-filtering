@@ -3,6 +3,7 @@ const data = await dataResponse.json();
 const jobListingsUl = document.querySelector(".job-listings");
 const tokenContainer = document.querySelector(".tokens");
 const clearBtn = document.querySelector(".clear-btn");
+const filterContainer = document.querySelector(".filter");
 const tokenSet = new Set();
 console.log(data);
 // console.log(jobLisg tingsUl);
@@ -18,6 +19,8 @@ function addToken(e) {
   const name = e.currentTarget.textContent.trim();
   if (!tokenSet.has(name)) {
     createToken(name);
+    jobListingsUl.classList.toggle("no-filter-margin", false);
+    filterContainer.classList.toggle("hide", false);
   }
   tokenSet.add(name);
 }
@@ -26,6 +29,9 @@ function removeToken(e) {
   const name = e.currentTarget.previousElementSibling.textContent.trim();
   tokenSet.delete(name);
   e.currentTarget.parentElement.remove();
+
+  jobListingsUl.classList.toggle("no-filter-margin", tokenSet.size == 0);
+  filterContainer.classList.toggle("hide", tokenSet.size == 0);
 }
 function createJobCard() {
   for (const job of data) {
@@ -81,7 +87,8 @@ function createJobCard() {
 function removeAllTokens() {
   tokenContainer.replaceChildren();
   tokenSet.clear();
-  console.log(tokenSet);
+  jobListingsUl.classList.toggle("no-filter-margin", true);
+  filterContainer.classList.toggle("hide", true);
 }
 function createToken(name) {
   tokenContainer.insertAdjacentHTML(

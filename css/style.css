@@ -196,6 +196,9 @@ header {
   /* padding-inline: 2.5rem; */
   /* margin-inline: 10.2rem; */
 }
+.hide {
+  display: none;
+}
 .job-listing-company {
   display: flex;
   gap: clamp(1.2rem, 1.4704rem + -0.3005vw, 1.4rem);
