@@ -42,8 +42,18 @@ header {
     object-fit: cover;
   }
 }
+
+.clear-btn {
+  color: var(--Dark-Grayish-Cyan);
+  min-height: 100%;
+  &:hover {
+    cursor: pointer;
+  }
+}
 .job-listings {
   padding: 0;
+  margin-block-start: 8.5rem;
+  margin-block-end: 2rem;
   & > .job-listing {
     list-style: none;
     display: flex;
@@ -55,7 +65,7 @@ header {
 
     border-radius: 0.5rem;
     padding-inline: 1.15rem;
-    margin-block-start: 3.5rem;
+    margin-block-start: 2.5rem;
     margin-inline: 1.5rem;
     box-shadow: 0px 20px 20px 0px
       hsl(from var(--Desaturated-Dark-Cyan) h s l / 0.5);
@@ -104,12 +114,13 @@ header {
   position: absolute;
   background-color: white;
   /* top: 0; */
-  bottom: -1rem;
+  bottom: -5.5rem;
   left: 0;
   right: 0;
-  padding: 1rem;
+  padding: 1.5rem;
   margin-inline: 1.5rem;
-  border-radius: 0.2rem;
+  border-radius: 0.3rem;
+  box-shadow: 0px 20px 20px hsl(from var(--Very-Dark-Grayish-Cyan) h s l / 0.2);
 }
 .job-listing-company {
   display: flex;
@@ -127,7 +138,7 @@ header {
 }
 .job-listing-categories {
   padding-block-start: 1rem;
-  padding-block-end: 1rem;
+  padding-block-end: 1.5rem;
   display: flex;
   flex-wrap: wrap;
   gap: 0.9rem;
@@ -138,7 +149,6 @@ header {
   gap: 0.9rem;
 }
 .token {
-  /* display: flex; */
   padding-inline: 0.6rem;
   padding-block: 0.25rem;
   background-color: var(--Light-Grayish-Cyan-Bg);
