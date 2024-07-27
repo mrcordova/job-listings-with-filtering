@@ -56,6 +56,12 @@ function createJobCard() {
                   </li>`
     );
   }
+  const tokens = jobListingsUl.querySelectorAll(".token");
+  for (const token of tokens) {
+    token.addEventListener("click", (e) => {
+      console.log(e.currentTarget.textContent.trim());
+    });
+  }
   // <p class="token">HTML</p>
   // <p class="token">CSS</p>
   // <p class="token">JavaScript</p>
