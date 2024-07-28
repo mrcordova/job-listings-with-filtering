@@ -24,14 +24,17 @@
 body {
   display: grid;
   grid-template-rows: max-content;
+
   min-height: 100vh;
   min-height: 100svh;
+
   justify-content: center;
   background-color: var(--Light-Grayish-Cyan-Bg);
 }
 
 main {
   height: 100%;
+  display: grid;
 }
 
 header {
@@ -206,7 +209,7 @@ header {
 .job-listing-company {
   display: flex;
   gap: clamp(1.2rem, 1.4704rem + -0.3005vw, 1.4rem);
-  /* align-items: center; */
+  align-items: center;
   /* Mobile */
   /* gap: 1.4rem; */
   /* Desktop */
