@@ -1,4 +1,4 @@
-const dataResponse = await fetch("./data.json");
+const dataResponse = await fetch("data.json");
 const data = await dataResponse.json();
 const jobListingsUl = document.querySelector(".job-listings");
 const tokenContainer = document.querySelector(".tokens");
