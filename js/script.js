@@ -1,12 +1,10 @@
-const dataResponse = await fetch("/data.json");
+const dataResponse = await fetch("./data.json");
 const data = await dataResponse.json();
 const jobListingsUl = document.querySelector(".job-listings");
 const tokenContainer = document.querySelector(".tokens");
 const clearBtn = document.querySelector(".clear-btn");
 const filterContainer = document.querySelector(".filter");
 const tokenSet = new Set();
-console.log(data);
-// console.log(jobLisg tingsUl);
 
 function myTags(strings, tags) {
   let tagTokens = "";
